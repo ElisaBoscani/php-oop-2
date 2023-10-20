@@ -1,35 +1,20 @@
 <?php
-class PetShop
-{
-  public $productName;
-  public $description;
-  public $img;
-  public $review;
-  public $price;
-
-  public function __construct($productName, $description, $img, $review, $price)
-  {
-    $this->productName = $productName;
-    $this->description = $description;
-    $this->img = $img;
-    $this->review = $review;
-    $this->review = $price;
-  }
-}
+require __DIR__ . '/Models/petShop.php';
 /* classe cani */
-class Dog extends PetShop
+class categories
 {
+  public $animal;
   public $breed;
   public $size;
-
-  public function setBreedSize($breed, $size)
+  public function __construct($animal, $breed, $size)
   {
+    $this->animal = $animal;
     $this->breed = $breed;
     $this->size = $size;
   }
 }
 /* classe gatti */
-class Cat extends PetShop
+/* class Cat extends product
 {
   public $breed;
   public $size;
@@ -39,34 +24,36 @@ class Cat extends PetShop
     $this->breed = $breed;
     $this->size = $size;
   }
-}
+} */
 
 /* istanze */
-$produc = new PetShop(
+
+$produc = new product(
   "Hill's Science Plan Puppy Medium con Agnello e Riso",
   "Hill's Science Plan Puppy Medium con Agnello e Riso è un alimento secco per cani cuccioli di taglia media",
-  "./Hills-puppy-medium-agnello-riso.webp",
-  "ottimo",
-  "2.50"
-);
-$producDog = new Dog(
-  "Hill's Science Plan Puppy Medium con Agnello e Riso",
-  "Hill's Science Plan Puppy Medium con Agnello e Riso è un alimento secco per cani cuccioli di taglia media",
-  "./Hills-puppy-medium-agnello-riso.webp",
+  "./img/Hills-puppy-medium-agnello-riso.webp",
   "ottimo",
   "2.50",
+  new categories("cane", "labrador", "medio")
 );
-$producDog->setBreedSize("Cane", "medio");
-$producCat = new Cat(
+/* $producDog = new Dog(
   "Hill's Science Plan Puppy Medium con Agnello e Riso",
   "Hill's Science Plan Puppy Medium con Agnello e Riso è un alimento secco per cani cuccioli di taglia media",
-  "./Hills-puppy-medium-agnello-riso.webp",
+  "./img/Hills-puppy-medium-agnello-riso.webp",
+  "ottimo",
+  "2.50",
+); */
+/* $producDog->setBreedSize("Cane", "medio"); */
+/* $producCat = new Cat(
+  "Hill's Science Plan Puppy Medium con Agnello e Riso",
+  "Hill's Science Plan Puppy Medium con Agnello e Riso è un alimento secco per cani cuccioli di taglia media",
+  "./img/Hills-puppy-medium-agnello-riso.webp",
   "ottimo",
   "2.50",
 
-);
-$producCat->setBreedSize("Gatto", "medio");
-var_dump($producDog)
+); */
+/* $producCat->setBreedSize("Gatto", "medio"); */
+var_dump($produc)
 ?>
 
 
@@ -77,6 +64,8 @@ var_dump($producDog)
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Prodotti per Animali</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
 </head>
 
 <body>
