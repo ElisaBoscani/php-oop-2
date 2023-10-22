@@ -1,12 +1,13 @@
-<h2>Prodotti</h2>
+<h2 class=" p-2">Prodotti</h2>
 <div class="container">
   <div class="row g-3 ">
     <?php foreach ($arrayProducs as $produc) : ?>
       <div class="col">
-        <div class="   d-flex flex-column align-items-center card" style="width: 18rem;">
+        <div class=" h-100  d-flex flex-column align-items-center card" style="width: 18rem;">
           <span class="badge text-bg-success position_icon">
             <?php if ($produc->typology->icon  == "cibo") : ?><i class="fa-solid fa-bowl-food" style="color: #ffffff;"></i>
             <?php elseif ($produc->typology->icon == "gioco") : ?><i class="fa-solid fa-baseball" style="color: #ffffff;"></i>
+            <?php elseif ($produc->typology->icon == "cucce") : ?><i class="fa-solid fa-mattress-pillow" style="color: #ffffff;"></i>
             <?php else : ?> <?php echo $produc->typology->icon ?>
             <?php endif; ?>
           </span>

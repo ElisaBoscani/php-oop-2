@@ -8,8 +8,9 @@ a {
   font-weight: bolder;
   font-size: 20px;
 }
+
 .position_icon {
-  right: 122px;
+  right: 129px;
   position: relative;
 }
 .img_logo {
@@ -17,11 +18,17 @@ a {
   height: 130px;
 }
 .link_nav {
-  width: 50%;
+  width: 63%;
   display: flex !important;
   justify-content: center;
   position: relative;
   top: -35px;
   gap: 20px;
   padding-left: 152px;
+}
+.bg_animal {
+  background-image: url(./img/Pets-with-halloween-costumes-cuate.png);
+  background-size: cover;
+  background-position: center;
+  height: 475px;
 }
