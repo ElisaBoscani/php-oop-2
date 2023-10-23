@@ -2,19 +2,17 @@
 trait ProductsNames
 {
   function getProductName(): string
-
   {
     return $this->productName;
   }
 
   function getDescription(): string
-
   {
     return $this->description;
   }
-  function getPrice(): string
 
+  function getPrice(): int
   {
-    return $this->price;
+    return  $this->price;
   }
 }

@@ -22,7 +22,13 @@ class Product
     $this->typology = $typology;
   }
 
-
+  public function controlPrize($productName)
+  {
+    if (!is_string($productName)) {
+      throw new InvalidArgumentException("non puoi inserire un numero");
+    }
+    $this->productName = $productName;
+  }
 
   /*   function setProductName($new_productName)
   {
