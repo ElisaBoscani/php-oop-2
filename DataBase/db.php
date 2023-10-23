@@ -18,7 +18,7 @@ $producFoodDog = new Product(
   $typeDog,
 );
 
-$categoryCat = new Category("Gatto", "Persiano", "medio");
+$categoryCat = new Category("gatto", "Persiano", "medio");
 $typeCat = new Typology("Cibo", "cibo");
 $producFoodCat = new Product(
   "Natural Trainer Gatto Sterilised Salmone",
@@ -31,7 +31,7 @@ $producFoodCat = new Product(
 
 );
 
-$categoryToyDog = new Category("Cane", "Tutte le razze", "Tutte le taglie");
+$categoryToyDog = new Category("cane", "Tutte le razze", "Tutte le taglie");
 $typeToyDog = new Typology("Osso da mordere", "gioco");
 $producToyDog = new Product(
   "KONG Extreme Goodie Bone",
@@ -43,7 +43,7 @@ $producToyDog = new Product(
   $typeToyDog,
 );
 
-$categoryToyCat = new Category("Gatto", "Tutte le razze", "Tutte le taglie");
+$categoryToyCat = new Category("gatto", "Tutte le razze", "Tutte le taglie");
 $typeToyCat = new Typology("Stella con erba", "gioco");
 $producToyCat = new Product(
   "Gioco per Gatti Euphoria Stella con Catnip",
@@ -55,7 +55,7 @@ $producToyCat = new Product(
   $typeToyCat,
 );
 
-$categoryKennelsDog = new Category("Cane", "Tutte le razze", "Tutte le taglie");
+$categoryKennelsDog = new Category("cane", "Tutte le razze", "Tutte le taglie");
 $typeKennelsDog = new Typology("Cucce", "cucce");
 $producKennelsDog = new Product(
   "Cuccia Rettangolare Zig Zag",

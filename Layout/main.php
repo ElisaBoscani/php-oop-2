@@ -12,22 +12,30 @@
             <?php endif; ?>
           </span>
           <img src=" <?php echo $produc->img; ?>" class="card-img-top w-100  pb-2" alt="...">
-          <div class="card-body p-2 d-flex flex-column align-items-center ">
-            <h5 class="card-text text-center "><?php echo $produc->productName; ?></h5>
+          <div class="card-body p-2 d-flex flex-column align-items-center  justify-content-between ">
+            <h5 class="card-text text-center "><?php echo $produc->getProductName(); ?></h5>
             <span><?php echo $produc->review; ?></span>
             <span><?php echo $produc->typology->type; ?></span>
-            <span><?php echo $produc->price; ?></span>
-            <div class="accordion accordion-flush" id="accordionFlushExample">
+            <span><?php echo $produc->getPrice(); ?></span>
+            <div class="accordion accordion-flush pt-3" id="accordionFlushExample">
               <div class="accordion-item">
                 <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                     Più informazioni
                   </button>
                 </h2>
-                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                  <?php foreach ($produc->category as $type) : ?>
-                    <div class="accordion-body"><?php echo $type ?> </div>
-                  <?php endforeach; ?>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample" class="d-flex flex-column">
+                  <p><?php echo $produc->getDescription() ?></p>
+                  <div>
+                    <span>
+                      <?php if ($produc->category->animal  == "cane") : ?><i class="fa-solid fa-dog" style="color: #fbff29;"></i>
+                      <?php elseif ($produc->category->animal == "gatto") : ?><i class="fa-solid fa-cat" style="color: #fbff29;"></i>
+                      <?php else : ?> <?php echo $produc->animal ?>
+                      <?php endif; ?>
+                    </span>
+                    <span><?php echo $produc->category->breed ?></span>
+                    <span><?php echo $produc->category->size ?></span>
+                  </div>
                 </div>
               </div>
             </div>

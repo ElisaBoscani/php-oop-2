@@ -1,11 +1,13 @@
 <?php
+require_once __DIR__ . '/../Traits/productsNames.php';
 class Product
 {
-  public $productName;
-  public $description;
+  use ProductsNames;
+  protected $productName;
+  protected $description;
   public $img;
   public $review;
-  public $price;
+  protected $price;
   public $category;
   public $typology;
 
@@ -19,4 +21,11 @@ class Product
     $this->category = $category;
     $this->typology = $typology;
   }
+
+
+
+  /*   function setProductName($new_productName)
+  {
+    return $this->productName = $new_productName;
+  } */
 }
